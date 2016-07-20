@@ -3,4 +3,11 @@ class RedmarkSinatraApp < Sinatra::Base
       erb '<h2>Redmark Sinatra</h2>'
     end
 
+    get '/users' do
+      
+      @users = User.all
+      erb :'users'
+    end
+
+
 end
