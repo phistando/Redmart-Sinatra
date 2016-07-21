@@ -3,8 +3,11 @@ require 'rubygems'
 require 'bundler'
 Bundler.require
 
-#This is the model
+#This is the user model
 require './models/user'
+
+#This is the product model
+require './models/product'
 
 #This is the contoller
 require'./app'
