@@ -6,8 +6,13 @@ class RedmarkSinatraApp < Sinatra::Base
     get '/users' do
 
       @users = User.all
-      erb :'users'
+      erb :'users/index'
     end
+
+  get '/users/:id' do
+  @user = User.find(params[:id])
+  erb :'users/show'
+end
 
 
 end

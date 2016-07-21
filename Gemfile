@@ -9,4 +9,6 @@ gem 'sinatra-activerecord'
 gem 'rake'
 gem 'activerecord'
 gem 'pg'
-gem 'tux'
+gem "tux", "~>0.3.0"
+gem "pry"
+# gem 'faker'
