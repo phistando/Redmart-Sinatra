@@ -1,3 +1,5 @@
+#rackup will run this
+
 #no need to change this
 require 'rubygems'
 require 'bundler'

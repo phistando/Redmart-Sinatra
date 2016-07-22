@@ -9,11 +9,26 @@ class RedmarkSinatraApp < Sinatra::Base
       erb :'users/index'
     end
 
+get '/users/new' do
+erb ':users/new'
+end
+
+
 #GET "/users/id" - Gets each specific user
   get '/users/:id' do
   @user = User.find(params[:id])
   erb :'users/show'
 end
+
+
+get '/users/:id/edit' do
+@user = User.find(params[:id])
+erb :'users/edit'
+end
+
+
+
+
 
 # GET "/products" - Gets all the products we have
   get '/products' do
