@@ -1,0 +1,36 @@
+<h3>Form to edit existing purchases / Edit Purchase details</h3>
+<h3>PURCHASE ID: <%= @purchase[:id] %></h3>
+
+<form action="/purchases/<%= @purchase[:id] %>" method="post">
+  <input type="hidden" name="_method" value="put">
+
+  <div class="form-group">
+    <div>
+    <label>product_id</label>
+  </div>
+      <input type="text" name="purchase[product_id]" value="<%= @purchase[:product_id] %>">
+  </div>
+
+  <div class="form-group">
+    <div>
+    <label>user_id</label>
+  </div>
+      <input type="text" name="purchase[user_id]" value="<%= @purchase[:user_id] %>">
+  </div>
+
+  <div class="form-group">
+    <div>
+    <label>purchase_date</label>
+  </div>
+      <input type="text" name="purchase[purchase_date]" value="<%= @purchase[:purchase_date] %>">
+  </div>
+
+  <div class="form-group">
+    <div>
+    <label>status</label>
+  </div>
+      <input type="text" name="purchase[status]" value="<%= @purchase[:status] %>">
+  </div>
+
+  <input type="submit" value="submit">
+</form>

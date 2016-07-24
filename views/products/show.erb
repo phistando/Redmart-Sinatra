@@ -1,19 +1,26 @@
+
 <h3>
-  This product is <%= @products[:name] %>
+  PRODUCT: <%= @product[:name] %>
 </h3>
 
 <p>
-  PRODUCT ID: <%= @products[:id] %>
-</p>
-
-<!-- <p>
-  Category ID: <%= @products[:category_id] %>
+  PRODUCT ID: <%= @product[:id] %>
 </p>
 
 <p>
-  Brand ID: <%= @products[:brand_id] %>
-</p> -->
+  CATEGORY ID: <%= @product[:category_id] %>
+</p>
 
 <p>
-  PRICE: <%= @products[:price] %>
+  BRAND ID: <%= @product[:brand_id] %>
 </p>
+
+<p>
+  PRICE: <%= @product[:price] %>
+</p>
+
+<!-- delete flow  -->
+<form action="/products/<%= @product[:id] %>" method="post">
+  <input type="hidden" name="_method" value="delete">
+  <input type="submit" value="Delete">
+</form>

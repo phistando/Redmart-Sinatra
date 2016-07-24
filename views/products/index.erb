@@ -8,6 +8,7 @@
       <th>brand_id</th>
       <th>category_id</th>
       <th>price</th>
+      <th>actions</th>
     </tr>
   </thead>
   <tbody>
@@ -28,6 +29,19 @@
       <td>
         <%= product[:price] %>
       </td>
+
+      <td>
+        <!-- show flow -->
+        <a href="/products/<%= product[:id] %>">View</a>
+        <a href="/products/<%= product[:id] %>>/edit">Edit</a>
+
+        <form action ="/products/<%= product[:id] %>" method="post">
+          <input type="hidden" name="_method" value="delete">
+          <input type="submit" value="Delete">
+
+        </form>
+      </td>
+
     </tr>
     <% end %>
   </tbody>

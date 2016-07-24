@@ -7,9 +7,10 @@
       <th>name</th>
       <th>email</th>
       <th>address</th>
-      <th>password</th>
-      <th>cc_number</th>
+      <!-- <th>password</th>
+      <th>cc_number</th> -->
       <th>date_joined</th>
+      <th>actions</th>
     </tr>
   </thead>
   <tbody>
@@ -27,14 +28,25 @@
       <td>
         <%= user[:address] %>
       </td>
-      <td>
+      <!-- <td>
         <%= user[:password] %>
       </td>
       <td>
         <%= user[:cc_number] %>
-      </td>
+      </td> -->
       <td>
         <%= user[:date_joined] %>
+      </td>
+      <td>
+        <!-- show flow -->
+        <a href="/users/<%= user[:id] %>">View</a>
+        <a href="/users/<%= user[:id] %>>/edit">Edit</a>
+
+        <form action ="/users/<%= user[:id] %>" method="post">
+          <input type="hidden" name="_method" value="delete">
+          <input type="submit" value="Delete">
+
+        </form>
       </td>
     </tr>
     <% end %>

@@ -59,7 +59,6 @@ ActiveRecord::Schema.define(version: 20160721164026) do
     t.string   "date_joined",            null: false
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "favorites"
   end
 
 end

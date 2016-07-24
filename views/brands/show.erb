@@ -1,0 +1,14 @@
+
+<h3>
+  Brand: <%= @brand[:name] %>
+</h3>
+
+<p>
+  Brand ID: <%= @brand[:id] %>
+</p>
+
+<!-- delete flow  -->
+<form action="/brands/<%= @brand[:id] %>" method="post">
+  <input type="hidden" name="_method" value="delete">
+  <input type="submit" value="Delete">
+</form>

@@ -1,0 +1,15 @@
+<h3>Form to edit existing categories / Edit Category details</h3>
+<h3>CATEGORY ID: <%= @category[:id] %></h3>
+
+<form action="/categories/<%= @category[:id] %>" method="post">
+  <input type="hidden" name="_method" value="put">
+
+  <div class="form-group">
+    <div>
+    <label>Name</label>
+  </div>
+      <input type="text" name="category[name]" value="<%= @category[:name] %>">
+  </div>
+
+  <input type="submit" value="submit">
+</form>

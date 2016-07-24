@@ -1,7 +1,7 @@
 <h2> each user page </h2>
 
 <h3>
-  This user is <%= @user[:name] %>
+  USER: <%= @user[:name] %>
 </h3>
 
 <p>
@@ -16,14 +16,20 @@
   ADDRESS: <%= @user[:address] %>
 </p>
 
-<p>
+<!-- <p>
   PASSWORD: <%= @user[:password] %>
 </p>
 
 <p>
   CC_NUMBER: <%= @user[:cc_number] %>
-</p>
+</p> -->
 
 <p>
   DATE JOINED: <%= @user[:date_joined] %>
 </p>
+
+<!-- delete flow  -->
+<form action="/users/<%= @user[:id] %>" method="post">
+  <input type="hidden" name="_method" value="delete">
+  <input type="submit" value="Delete">
+</form>

@@ -1,0 +1,26 @@
+<h3>
+  PURCHASE ID: <%= @purchase[:id] %>
+</h3>
+
+<p>
+  PRODUCT ID: <%= @purchase[:product_id] %>
+</p>
+
+<p>
+  USER ID: <%= @purchase[:user_id] %>
+</p>
+
+<p>
+  PURCHASE DATE: <%= @purchase[:purchase_date] %>
+</p>
+
+<p>
+  STATUS: <%= @purchase[:status] %>
+</p>
+
+
+<!-- delete flow  -->
+<form action="/purchases/<%= @purchase[:id] %>" method="post">
+  <input type="hidden" name="_method" value="delete">
+  <input type="submit" value="Delete">
+</form>

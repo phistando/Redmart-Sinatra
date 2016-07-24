@@ -11,4 +11,4 @@ gem 'activerecord'
 gem 'pg'
 gem "tux", "~>0.3.0"
 gem "pry"
-# gem 'faker'
+gem "faker"
